@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+lila-viz/node_modules/
+
+# Build output
+lila-viz/dist/
+
+# OS files
+.DS_Store
+*.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Claude internals
+.claude/
+
+# Temporary files
+*.pyc
+__pycache__/
+
+# Pipeline intermediate files
+feb10_parsed.csv
+load_data.py
+
+# Duplicate output (pipeline writes here, copied to lila-viz/public/)
+public/
+
+# Vercel
+.vercel/
+lila-viz/.vercel/
+
+# Raw data (large, not needed in repo since processed output is included)
+# Uncomment if you want to exclude raw parquet data:
+# player_data/

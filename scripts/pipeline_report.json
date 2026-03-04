@@ -1,0 +1,104 @@
+{
+  "files_processed": 1243,
+  "files_skipped": [],
+  "total_parquet_rows": 89104,
+  "total_json_events": 89104,
+  "event_counts": {
+    "Kill": 3,
+    "BotKill": 2415,
+    "Killed": 3,
+    "BotKilled": 700,
+    "Loot": 12885,
+    "KilledByStorm": 39,
+    "Position": 51347,
+    "BotPosition": 21712
+  },
+  "unknown_events": [],
+  "out_of_bounds": {
+    "count": 0,
+    "percentage": 0.0
+  },
+  "bot_detection_mismatches": [
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    },
+    {
+      "user_id": "1429",
+      "event": "Position"
+    }
+  ],
+  "matches_written": 796
+}
