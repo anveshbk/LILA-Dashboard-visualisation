@@ -62,6 +62,38 @@ A browser-based visualization tool for exploring player telemetry data from **LI
 
 **Event Types**: Position, BotPosition, Kill, Killed, BotKill, BotKilled, KilledByStorm, Loot
 
+### Data Integrity Verification
+
+The pipeline includes post-write verification ensuring zero data loss from parquet source to JSON output.
+
+**Source (Parquet files):**
+
+| Day | Files | Rows |
+|---|---|---|
+| February 10 | 437 | 33,687 |
+| February 11 | 293 | 21,235 |
+| February 12 | 268 | 18,429 |
+| February 13 | 166 | 11,106 |
+| February 14 | 79 | 4,647 |
+| **Total** | **1,243** | **89,104** |
+
+**Output (Match JSON files):**
+
+| Day | Match JSONs | Events |
+|---|---|---|
+| 2026-02-10 | 285 | 33,958 |
+| 2026-02-11 | 200 | 20,964 |
+| 2026-02-12 | 162 | 18,429 |
+| 2026-02-13 | 112 | 11,106 |
+| 2026-02-14 | 37 | 4,647 |
+| **Total** | **796** | **89,104** |
+
+**Grand total: 89,104 parquet rows = 89,104 JSON events (exact match, zero loss)**
+
+Notes:
+- File count differs (1,243 → 796) because multiple parquet files can belong to the same match (different `.nakama-X` suffixes) and are merged into one JSON per match
+- Feb 10/11 per-day row counts differ slightly between source and output because some matches span midnight — the pipeline groups by match timestamp, not by source folder. The grand total is identical
+
 ---
 
 ## Project Structure

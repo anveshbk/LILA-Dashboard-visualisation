@@ -20,6 +20,19 @@ Manual test cases for verifying the tool's functionality. Organized by feature a
   - Total: 796 matches
 - **Validates**: All parquet files processed, no matches dropped
 
+### TC-1.2b: Per-day event count cross-verification
+- **Steps**: Sum all events across match JSONs grouped by date, compare to parquet source
+- **Expected**:
+  | Day | Parquet Rows | JSON Events | Status |
+  |---|---|---|---|
+  | Feb 10 | 33,687 | 33,958 | Per-day differs (midnight-span matches), total OK |
+  | Feb 11 | 21,235 | 20,964 | Per-day differs (midnight-span matches), total OK |
+  | Feb 12 | 18,429 | 18,429 | Exact match |
+  | Feb 13 | 11,106 | 11,106 | Exact match |
+  | Feb 14 | 4,647 | 4,647 | Exact match |
+  | **Total** | **89,104** | **89,104** | **Exact match** |
+- **Validates**: Zero data loss end-to-end. Per-day variance on Feb 10/11 is expected because some matches span midnight and the pipeline groups by match timestamp, not source folder
+
 ### TC-1.3: Coordinate bounds check
 - **Steps**: Check pipeline report (`scripts/pipeline_report.json`) for out-of-bounds percentage
 - **Expected**: 0% out-of-bounds coordinates (all px, py within 0-1024)
