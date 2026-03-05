@@ -6,14 +6,6 @@ A browser-based visualization tool for exploring player telemetry data from **LI
 
 ---
 
-## Screenshots
-
-| Dark Theme | Light Theme |
-|---|---|
-| Default dark mode with player trails on Ambrose Valley | Light mode with heatmap overlay |
-
----
-
 ## Features
 
 ### Data Pipeline
