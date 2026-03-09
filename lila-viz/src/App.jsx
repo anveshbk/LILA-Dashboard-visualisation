@@ -38,7 +38,7 @@ export default function App() {
   const [selectedMatchId, setSelectedMatchId] = useState(null);
   const [selectedPlayerId, setSelectedPlayerId] = useState(null);
   const [showBots, setShowBots] = useState(true);
-  const [showTrails, setShowTrails] = useState(true);
+  const [showTrails, setShowTrails] = useState(false);
   const [activeHeatmap, setActiveHeatmap] = useState(null);
   const [tooltipEvent, setTooltipEvent] = useState(null);
   const [tooltipPos, setTooltipPos] = useState(null);
